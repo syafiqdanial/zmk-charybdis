@@ -41,12 +41,15 @@
 
         snipe {
             layers = <SNIPE>;
-            input-processors = <&xy_scaler 1 3>;
+            input-processors = <&xy_scaler 1 2>;
         };
 
         scroll {
             layers = <SCROLL>;
-            input-processors = <&xy_invert (INPUT_TRANSFORM_Y_INVERT)>, <&xy_scaler 1 3>, <&x_scaler 0 1>, <&mouse_to_wheel_mapper>;
+            input-processors = 
+                <&xy_invert (INPUT_TRANSFORM_Y_INVERT)>, 
+                <&xy_scaler 1 1>, 
+                <&mouse_to_wheel_mapper>;
         };
     };
 
