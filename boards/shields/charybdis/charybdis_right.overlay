@@ -36,19 +36,3 @@
 &trackball {
     status = "okay";
 };
-
-&trackball_split {
-    device = <&trackball>;
-};
-
-# / {
-# 	vtrackball: virtual_input_trackball {
-# 		compatible = "zmk,virtual-input";
-# 	};
-#
-# 	input_relay_config_trackball {
-# 		compatible = "zmk,split-peripheral-input-relay";
-# 		device = <&trackball>;
-# 		relay-channel = <102>;
-# 	};
-# };
