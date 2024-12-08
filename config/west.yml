@@ -8,8 +8,6 @@ manifest:
       url-base: https://github.com/urob
     - name: badjeff
       url-base: https://github.com/badjeff
-    - name: m165437 
-      url-base: https://github.com/M165437
 
     - name: englmaxi
       url-base: https://github.com/englmaxi
@@ -32,6 +30,9 @@ manifest:
       revision: main
     - name: zmk-dongle-display
       remote: englmaxi
+      revision: main
+    - name: zmk-input-behavior-listener
+      remote: badjeff
       revision: main
 
   self:
