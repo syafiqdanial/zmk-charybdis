@@ -39,7 +39,7 @@
 / {
     trackball_move: trackball_move {
         compatible = "zmk,input-behavior-listener";
-        device = <&trackball_split>;
+        device = <&vtrackball>;
         layers = <BASE SNIPE SCROLL>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
@@ -51,7 +51,7 @@
 
     trackball_snipe: trackball_snipe {
         compatible = "zmk,input-behavior-listener";
-        device = <&trackball_split>;
+        device = <&vtrackball>;
         layers = <SNIPE>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
@@ -62,7 +62,7 @@
 
     trackball_scroll: trackball_scroll {
         compatible = "zmk,input-behavior-listener";
-        device = <&trackball_split>;
+        device = <&vtrackball>;
         layers = <SCROLL>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_MISC>;
