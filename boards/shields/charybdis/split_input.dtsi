@@ -36,16 +36,8 @@
 
     move {
       layers = <BASE>;
-      // input-processors = <&auto_mouse_layer MOUSE 5000>;
     };
   };
-
-  // auto_mouse_layer: auto_mouse_layer {
-  //   compatible = "zmk,input-processor-temp-layer";
-  //   #input-processor-cells = <2>;
-  //   require-prior-idle-ms = <500>;
-  //   excluded-positions = <30 31 32 16 17 18 10 11 12 13 22 23>;
-  // };
 };
 
 
