@@ -4,9 +4,10 @@
 #define BASE 0
 #define NUMS 1
 #define DANGER 2
-#define SCROLL 3
-#define SNIPE 4
-#define AUTO 5
+#define MOUSE 3
+#define SCROLL 4
+#define SNIPE 5
+#define AUTO 6
 
 / {
   split_inputs {
@@ -31,12 +32,12 @@
 
     scroll {
       layers = <SCROLL>;
-      input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 1 5>, <&zip_xy_to_scroll_mapper>;
+      input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 1 6>, <&zip_xy_to_scroll_mapper>;
     };
 
-    move {
-      layers = <BASE>;
-    };
+    // move {
+    //   layers = <BASE MOUSE>;
+    // };
   };
 };
 
