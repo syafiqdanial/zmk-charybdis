@@ -20,9 +20,10 @@
 #define BASE 0
 #define NUMS 1
 #define DANGER 2
-#define SCROLL 3
-#define SNIPE 4
-#define AUTO 5
+#define MOUSE 3
+#define SCROLL 4
+#define SNIPE 5
+#define AUTO 6
 
 #include "zmk-helpers/key-labels/34.h"                                      // key-position labels
 
@@ -65,7 +66,7 @@
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             bindings = <&mkp LCLK>;
-            key-positions = <16 17>;
+            key-positions = <16 17>;  
         };
 
         combo_mouse_right_click_r {
@@ -315,10 +316,10 @@
         BASE {
             display-name = "BASE";
             bindings = <
-  &kp Q                 &kp W             &kp E                 &kp R               &kp T        &kp Y      &kp U               &kp I                  &kp O              &kp P
-  &hm_l LEFT_CONTROL A  &hm_l LEFT_ALT S  &hm_l LEFT_COMMAND D  &hm_l LEFT_SHIFT F  &kp G        &kp H      &hm_r LEFT_SHIFT J  &hm_r RIGHT_COMMAND K  &hm_r RIGHT_ALT L  &hm_r RIGHT_CONTROL SEMI
-  &kp Z                 &kp X             &kp C                 &kp V               &kp B        &kp N      &kp M               &kp COMMA              &kp DOT            &kp SLASH
-                                          &mo 2                 &mo 1               &kp ENTER    &kp SPACE  &lt 2 BACKSPACE
+  &kp Q          &kp W         &kp E         &kp R          &kp T            &kp Y      &kp U            &kp I         &kp O         &kp P
+  &hm_l LCTRL A  &hm_l LALT S  &hm_l LGUI D  &hm_l LSHFT F  &kp G            &kp H      &hm_r RSHFT J    &hm_r RGUI K  &hm_r RALT L  &hm_r RCTRL SEMI
+  &kp Z          &kp X         &kp C         &kp V          &kp B            &kp N      &kp M            &kp COMMA     &kp DOT       &kp SLASH
+                               &mo 2         &mo 1          &lt 3 ENTER      &kp SPACE  &lt 2 BACKSPACE
             >;
         };
 
@@ -342,33 +343,43 @@
             >;
         };
 
+        MOUSE {
+            display-name = "MOUSE";
+            bindings = <
+                &trans  &trans    &trans    &trans    &trans      &trans  &trans    &trans    &trans    &trans
+                &trans  &mkp LCLK &mkp MCLK &mkp RCLK &trans      &trans  &mkp LCLK &mkp MCLK &mkp RCLK &trans
+                &trans  &trans    &mo 3     &mo 4     &trans      &trans  &mo 3     &mo 4     &trans    &trans
+                                  &trans    &trans    &trans      &trans  &trans
+            >;
+        };
+
         SCROLL {
             display-name = "SCROLL";
             bindings = <
-                &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
-                                &trans    &trans    &trans    &trans  &trans
+                &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans    &trans    &trans  &trans
             >;
         };
 
         SNIPE {
             display-name = "SNIPE";
             bindings = <
-                &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
-                                &trans    &trans    &trans    &trans  &trans
+                &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans    &trans    &trans  &trans
             >;
         };
 
         AUTO {
             display-name = "AUTO";
             bindings = <
-                &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
-                                &trans    &trans    &trans    &trans  &trans
+                &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans    &trans    &trans  &trans
             >;
         };
     };
